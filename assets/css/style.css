@@ -27,32 +27,38 @@
 /* Variables globales */
 :root {
     /* Colores principales */
-    --color-primario: #3498db;
-    --color-secundario: #2c3e50;
+    --color-primario: #820AD1; /* Púrpura de Nubank */
+    --color-secundario: #34495e; /* Azul grisáceo oscuro */
     --color-blanco: #ffffff;
-    --color-texto: #333333;
-    --color-fondo: #f5f5f5;
+    --color-texto: #4a4a4a; /* Gris oscuro suave */
+    --color-fondo: #f8f9fa; /* Blanco muy ligero */
+    --color-fondo-alt: #e9ecef; /* Gris muy claro para secciones alternas */
+    --color-borde: #dee2e6; /* Gris para bordes */
     
     /* Espaciado */
     --spacing-xs: 0.25rem;
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
     --spacing-lg: 2rem;
-    --spacing-xl: 4rem;
+    --spacing-xl: 3rem; /* Ajustado para más espacio */
+    --spacing-xxl: 5rem;
     
     /* Tipografía */
     --font-family-base: 'Roboto', sans-serif;
-    --font-size-base: 16px;
-    --line-height-base: 1.5;
+    --font-size-base: 1rem; /* 16px */
+    --line-height-base: 1.6;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
     
     /* Bordes */
-    --border-radius: 4px;
-    --border-color: #e0e0e0;
+    --border-radius: 8px; /* Aumentado para esquinas más suaves */
+    --border-color: var(--color-borde);
     
     /* Sombras */
-    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
-    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-    --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.1);
+    --shadow-lg: 0 8px 16px rgba(0,0,0,0.15);
     
     /* Z-index */
     --z-index-dropdown: 1000;
@@ -82,15 +88,35 @@ body {
     padding: 0 var(--spacing-md);
 }
 
+/* Estilos para el contenido de las páginas */
+.page-content {
+    max-width: 1000px; /* Ajusta este valor si necesitas un ancho diferente */
+    margin: var(--spacing-lg) auto; /* Centra el contenido y añade margen superior/inferior */
+    padding: 0 var(--spacing-md); /* Añade padding a los lados */
+}
+
 /* Secciones */
 section {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-xxl) 0; /* Aumentado para más espacio entre secciones */
 }
 
 /* Títulos */
 h1, h2, h3, h4, h5, h6 {
     color: var(--color-secundario);
     margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
 }
 
 /* Enlaces */
@@ -114,11 +140,15 @@ a:hover {
     border-radius: var(--border-radius);
     cursor: pointer;
     transition: all 0.3s ease;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    text-align: center;
 }
 
 .btn:hover {
     background-color: var(--color-secundario);
     transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
 }
 
 /* Cards */
@@ -126,7 +156,7 @@ a:hover {
     background-color: var(--color-blanco);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-sm);
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -144,6 +174,7 @@ label {
     display: block;
     margin-bottom: var(--spacing-xs);
     color: var(--color-secundario);
+    font-weight: var(--font-weight-medium);
 }
 
 input, textarea {
@@ -151,12 +182,14 @@ input, textarea {
     padding: var(--spacing-sm);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: var(--font-size-base);
 }
 
 input:focus, textarea:focus {
     outline: none;
     border-color: var(--color-primario);
+    box-shadow: 0 0 0 0.2rem rgba(var(--color-primario), 0.25);
 }
 
 /* Utilidades */
@@ -179,7 +212,7 @@ input:focus, textarea:focus {
 /* Media Queries */
 @media (max-width: 768px) {
     :root {
-        --font-size-base: 14px;
+        --font-size-base: 0.95rem;
     }
     
     .container {
@@ -187,87 +220,224 @@ input:focus, textarea:focus {
     }
     
     section {
-        padding: var(--spacing-lg) 0;
+        padding: var(--spacing-xl) 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        width: auto; /* Revertir a ancho automático en móviles */
+        text-align: center;
+        padding: var(--spacing-sm) var(--spacing-md); /* Ajustar padding */
     }
 }
 
 @media (max-width: 480px) {
     :root {
-        --font-size-base: 12px;
+        --font-size-base: 0.9rem;
     }
     
-    .btn {
-        width: 100%;
-        text-align: center;
+    section {
+        padding: var(--spacing-lg) 0;
+    }
+
+     h1 {
+        font-size: 1.75rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.2rem;
     }
 }
 
 /* Sección de Enlaces Rápidos */
 .quick-links {
-    padding: 4rem 2rem;
+    padding: var(--spacing-xxl) var(--spacing-md); /* Ajustar padding */
     background-color: var(--color-fondo-alt);
 }
 
 .quick-links h2 {
     text-align: center;
-    margin-bottom: 2rem;
-    color: var(--color-primario);
+    margin-bottom: var(--spacing-xl); /* Ajustar margen */
+    color: var(--color-secundario); /* Cambiar color */
 }
 
 .links-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    gap: var(--spacing-lg); /* Ajustar espacio entre cards */
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .link-card {
     background: var(--color-blanco);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-xl); /* Ajustar padding */
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md); /* Usar sombra media */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .link-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-lg);
 }
 
 .link-card h3 {
-    color: var(--color-primario);
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
+    color: var(--color-primario); /* Cambiar color */
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.3rem; /* Ajustar tamaño de fuente */
 }
 
 .link-card p {
     color: var(--color-texto);
-    margin-bottom: 1.5rem;
-    font-size: 1rem;
-    line-height: 1.5;
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    flex-grow: 1; /* Para que el párrafo ocupe el espacio restante */
 }
 
 .btn-link {
     display: inline-block;
     color: var(--color-primario);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: var(--font-weight-medium);
     transition: color 0.3s ease;
+    margin-top: var(--spacing-sm); /* Añadir espacio superior */
 }
 
 .btn-link:hover {
     color: var(--color-secundario);
+    text-decoration: underline;
 }
 
 /* Responsive para Enlaces Rápidos */
 @media (max-width: 768px) {
     .links-grid {
         grid-template-columns: 1fr;
-        padding: 0 1rem;
+        padding: 0 var(--spacing-md); /* Ajustar padding */
     }
     
+    .quick-links {
+        padding: var(--spacing-xl) var(--spacing-md); /* Ajustar padding */
+    }
+
     .link-card {
-        padding: 1.5rem;
+        padding: var(--spacing-lg); /* Ajustar padding */
+    }
+
+    .link-card h3 {
+        font-size: 1.2rem; /* Ajustar tamaño de fuente */
+    }
+}
+
+@media (max-width: 480px) {
+    .quick-links {
+        padding: var(--spacing-lg) var(--spacing-sm); /* Ajustar padding */
+    }
+
+    .links-grid {
+        gap: var(--spacing-md); /* Ajustar espacio entre cards */
+    }
+}
+
+/* Estilos para la Sección de Categorías */
+.categories {
+    padding: var(--spacing-xxl) var(--spacing-md); /* Ajustar padding */
+}
+
+.categories h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-secundario); /* Mantener color secundario */
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg); /* Ajustar espacio entre cards */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-card {
+    background: var(--color-blanco);
+    padding: var(--spacing-xl); /* Ajustar padding */
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Centrar contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.category-card h3 {
+    color: var(--color-primario); /* Cambiar color */
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.4rem; /* Ajustar tamaño de fuente */
+}
+
+.category-card p {
+    color: var(--color-texto);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    flex-grow: 1; /* Para que el párrafo ocupe el espacio restante */
+}
+
+.category-card .btn {
+    margin-top: var(--spacing-sm); /* Añadir espacio superior */
+}
+
+/* Responsive para Categorías */
+@media (max-width: 768px) {
+     .category-grid {
+        grid-template-columns: 1fr;
+        padding: 0 var(--spacing-md); /* Ajustar padding */
+    }
+    
+    .categories {
+        padding: var(--spacing-xl) var(--spacing-md); /* Ajustar padding */
+    }
+
+     .category-card {
+        padding: var(--spacing-lg); /* Ajustar padding */
+    }
+
+    .category-card h3 {
+        font-size: 1.3rem; /* Ajustar tamaño de fuente */
+    }
+}
+
+@media (max-width: 480px) {
+    .categories {
+        padding: var(--spacing-lg) var(--spacing-sm); /* Ajustar padding */
+    }
+
+     .category-grid {
+        gap: var(--spacing-md); /* Ajustar espacio entre cards */
     }
 } 
