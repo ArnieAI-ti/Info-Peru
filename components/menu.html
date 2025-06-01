@@ -2,43 +2,43 @@
 <nav class="main-nav">
     <div class="nav-container">
         <button class="nav-toggle" aria-label="Abrir menú">
-            <i data-feather="menu"></i>
+            <span class="emoji">☰</span>
         </button>
         <ul class="nav-list">
             <li class="nav-item">
                 <a href="https://arnieai-ti.github.io/Info-Peru/pages/tramites.html" class="nav-link">
-                    <i data-feather="file-text"></i>
-                    Trámites
+                    <span class="emoji">📄</span>
+                    <span class="nav-text">Trámites</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="https://arnieai-ti.github.io/Info-Peru/pages/tecnologia.html" class="nav-link">
-                    <i data-feather="cpu"></i>
-                    Tecnología
+                    <span class="emoji">💻</span>
+                    <span class="nav-text">Tecnología</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="https://arnieai-ti.github.io/Info-Peru/pages/salud.html" class="nav-link">
-                    <i data-feather="heart"></i>
-                    Salud
+                    <span class="emoji">❤️</span>
+                    <span class="nav-text">Salud</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="https://arnieai-ti.github.io/Info-Peru/pages/educacion.html" class="nav-link">
-                    <i data-feather="book"></i>
-                    Educación
+                    <span class="emoji">📚</span>
+                    <span class="nav-text">Educación</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="https://arnieai-ti.github.io/Info-Peru/pages/finanzas.html" class="nav-link">
-                    <i data-feather="dollar-sign"></i>
-                    Finanzas
+                    <span class="emoji">💰</span>
+                    <span class="nav-text">Finanzas</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="https://arnieai-ti.github.io/Info-Peru/pages/contacto.html" class="nav-link">
-                    <i data-feather="mail"></i>
-                    Contacto
+                    <span class="emoji">✉️</span>
+                    <span class="nav-text">Contacto</span>
                 </a>
             </li>
         </ul>
@@ -50,21 +50,21 @@
 <style>
 .main-nav {
     background-color: var(--color-secundario);
-    padding: 0.5rem 0;
+    padding: 0.75rem 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
 }
 
 .nav-list {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 2.5rem;
     margin: 0;
     padding: 0;
 }
@@ -76,13 +76,13 @@
 .nav-link {
     color: var(--color-blanco);
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.25rem;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.75rem;
     font-weight: 500;
     transition: all 0.3s ease;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 .nav-link:hover {
@@ -90,22 +90,15 @@
     transform: translateY(-2px);
 }
 
-.nav-icon {
-    /* Placeholder styles, replace with actual icon font/SVG styles */
-    display: inline-block;
-    width: 1em; /* Adjust as needed */
-    height: 1em; /* Adjust as needed */
-    background-color: currentColor;
-    mask-size: cover;
+.emoji {
+    font-size: 1.25rem;
+    line-height: 1;
 }
 
-/* Replace with actual SVG paths for icons */
-.icon-document { mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm-2 16H8v-2h4v2zm0-4H8v-2h4v2zm3-10V4.5L18.5 9H15z"/></svg>'); }
-.icon-laptop { mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>'); }
-.icon-health { mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c-4.97 0-9 4.03-9 9 0 3.02 1.49 5.69 3.81 7.38L6 22h12l-.81-3.62C19.51 16.69 21 14.02 21 11c0-4.97-4.03-9-9-9zm0 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm-1-5H8v-2h3V8h2v3h3v2h-3v3h-2v-3z"/></svg>'); }
-.icon-education { mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm6.35 6L12 12.73 5.65 9 12 5.27 18.35 9zM18 11.73L12 15.46 6 11.73V16h12v-4.27z"/></svg>'); }
-.icon-finance { mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H5V4h5v16zm4 0h5V9h-5v11zm-3-11c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1h2c.55 0 1 .45 1 1v3c0 .55-.45 1-1 1h-2z"/></svg>'); }
-.icon-contact { mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 4H2C.9 4 0 4.9 0 6v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H2V8l9.6-6.41c.2-.13.44-.19.68-.19s.48.06.68.19L22 8v10zm-7-4.81V12h-3v3.19L12 16l2.7-1.81c.14-.1.3-.19.47-.19s.33.07.47.19L18 16l-3-1.81z"/></svg>'); }
+.nav-text {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
 
 /* Efecto de línea debajo del enlace activo */
 .nav-link::after {
@@ -128,17 +121,17 @@
 @media (max-width: 768px) {
     .nav-list {
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 1.25rem;
         justify-content: center;
     }
 
     .nav-link {
-        padding: 0.5rem;
-        font-size: 0.9rem;
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
     }
 
-    .nav-icon {
-        font-size: 1rem;
+    .emoji {
+        font-size: 1.15rem;
     }
 }
 
@@ -147,6 +140,7 @@
     .nav-list {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
     }
 
     .nav-item {
@@ -156,6 +150,7 @@
 
     .nav-link {
         justify-content: center;
+        padding: 1rem;
     }
 }
 </style> 
