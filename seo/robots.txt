@@ -1,15 +1,34 @@
 # robots.txt para Info Perú
+# Última actualización: 19 de marzo de 2024
+
 User-agent: *
 Allow: /
-Allow: /pages/
-Allow: /assets/
+Allow: /noticias/
+Allow: /turismo/
+Allow: /cultura/
+Allow: /economia/
+Allow: /acerca-de/
+Allow: /contacto/
+Allow: /legal/
+Allow: /servicios/
 
-# No permitir acceso a archivos de sistema
-Disallow: /components/
-Disallow: /seo/
+# Deshabilitar acceso a áreas administrativas y sensibles
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /includes/
+Disallow: /config/
+Disallow: /backup/
+Disallow: /logs/
+Disallow: /*.sql$
+Disallow: /*.sql.gz$
+Disallow: /*.log$
+Disallow: /*.zip$
+Disallow: /*.tar$
+Disallow: /*.gz$
 
-# Sitemap
+# Permitir acceso al sitemap
 Sitemap: https://infoperu.com/seo/sitemap.xml
 
-# Crawl-delay
+# Crawl-delay para evitar sobrecarga del servidor
 Crawl-delay: 10 

@@ -3,54 +3,82 @@
     <!-- Página Principal -->
     <url>
         <loc>https://infoperu.com/</loc>
-        <lastmod>2024-01-06</lastmod>
-        <changefreq>weekly</changefreq>
+        <lastmod>2024-03-19</lastmod>
+        <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
 
-    <!-- Páginas Principales -->
+    <!-- Secciones Principales -->
     <url>
-        <loc>https://infoperu.com/pages/tramites.html</loc>
-        <lastmod>2024-01-06</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://infoperu.com/pages/tecnologia.html</loc>
-        <lastmod>2024-01-06</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://infoperu.com/pages/salud.html</loc>
-        <lastmod>2024-01-06</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://infoperu.com/pages/educacion.html</loc>
-        <lastmod>2024-01-06</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://infoperu.com/pages/finanzas.html</loc>
-        <lastmod>2024-01-06</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://infoperu.com/noticias</loc>
+        <lastmod>2024-03-19</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
 
-    <!-- Páginas Secundarias -->
     <url>
-        <loc>https://infoperu.com/pages/legal.html</loc>
-        <lastmod>2024-01-06</lastmod>
+        <loc>https://infoperu.com/turismo</loc>
+        <lastmod>2024-03-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://infoperu.com/cultura</loc>
+        <lastmod>2024-03-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://infoperu.com/economia</loc>
+        <lastmod>2024-03-19</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Páginas de Información -->
+    <url>
+        <loc>https://infoperu.com/acerca-de</loc>
+        <lastmod>2024-03-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+
     <url>
-        <loc>https://infoperu.com/pages/contacto.html</loc>
-        <lastmod>2024-01-06</lastmod>
+        <loc>https://infoperu.com/contacto</loc>
+        <lastmod>2024-03-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+    </url>
+
+    <!-- Páginas Legales -->
+    <url>
+        <loc>https://infoperu.com/legal/politica-privacidad</loc>
+        <lastmod>2024-03-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://infoperu.com/legal/aviso-legal</loc>
+        <lastmod>2024-03-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Secciones de Servicios -->
+    <url>
+        <loc>https://infoperu.com/servicios/publicidad</loc>
+        <lastmod>2024-03-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://infoperu.com/servicios/colaboraciones</loc>
+        <lastmod>2024-03-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
     </url>
 </urlset> 

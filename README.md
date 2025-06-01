@@ -1,106 +1,144 @@
 # Info Perú
 
-Info Perú es una plataforma web que proporciona información confiable y actualizada sobre servicios, trámites y noticias relevantes en Perú.
+## Descripción
+Info Perú es una plataforma informativa integral que proporciona noticias, información turística, cultural y económica sobre Perú. Nuestro objetivo es ser la fuente confiable y actualizada de información sobre el país, facilitando el acceso a contenido relevante tanto para peruanos como para visitantes internacionales.
 
-## 🚀 Características
+## Características Principales
+- 📰 **Noticias Actualizadas**: Cobertura de eventos nacionales e internacionales relevantes para Perú
+- 🏞️ **Guía Turística**: Información detallada sobre destinos, atracciones y experiencias turísticas
+- 🎭 **Cultura Peruana**: Contenido sobre tradiciones, arte, gastronomía y patrimonio cultural
+- 💹 **Economía**: Análisis económico, tendencias de mercado y oportunidades de inversión
+- 🔍 **Búsqueda Avanzada**: Sistema de búsqueda intuitivo para encontrar información específica
+- 📱 **Diseño Responsivo**: Experiencia optimizada para todos los dispositivos
 
-- Información actualizada sobre trámites y servicios
-- Secciones especializadas en tecnología, salud, educación y finanzas
-- Diseño responsive y accesible
-- Optimización SEO
-- Documentación legal completa
+## Secciones y Funcionalidades Planeadas
 
-## 📁 Estructura del Proyecto
+### Secciones de Contenido
+1. **Noticias**
+   - Noticias nacionales
+   - Noticias internacionales
+   - Noticias regionales
+   - Noticias de última hora
+   - Archivo histórico
 
+2. **Turismo**
+   - Destinos populares
+   - Guías de viaje
+   - Experiencias turísticas
+   - Información práctica
+   - Galería multimedia
+
+3. **Cultura**
+   - Tradiciones y costumbres
+   - Gastronomía peruana
+   - Arte y música
+   - Patrimonio cultural
+   - Eventos culturales
+
+4. **Economía**
+   - Noticias económicas
+   - Análisis de mercado
+   - Indicadores económicos
+   - Oportunidades de inversión
+   - Reportes especiales
+
+### Funcionalidades Técnicas
+1. **Sistema de Usuarios**
+   - Registro y autenticación
+   - Perfiles personalizados
+   - Guardado de favoritos
+   - Historial de lectura
+   - Notificaciones personalizadas
+
+2. **Interactividad**
+   - Comentarios en artículos
+   - Compartir en redes sociales
+   - Sistema de valoraciones
+   - Encuestas y sondeos
+   - Foros de discusión
+
+3. **Herramientas**
+   - Buscador avanzado
+   - Filtros por categoría
+   - Calendario de eventos
+   - Mapa interactivo
+   - Conversor de moneda
+
+## Estructura del Proyecto
+
+### Organización de Directorios
 ```
 info-peru/
-├── assets/
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   └── main.js
-│   └── img/
-├── components/
-│   ├── header.html
-│   ├── menu.html
-│   └── footer.html
-├── legal/
+├── assets/                  # Recursos estáticos
+│   ├── images/             # Imágenes y gráficos
+│   │   ├── icons/         # Iconos del sitio
+│   │   ├── banners/       # Banners y headers
+│   │   └── content/       # Imágenes de contenido
+│   ├── css/               # Estilos
+│   │   ├── main.css      # Estilos principales
+│   │   ├── components/   # Estilos de componentes
+│   │   └── themes/       # Temas y variantes
+│   └── js/                # Scripts JavaScript
+│       ├── main.js       # Script principal
+│       ├── components/   # Componentes JS
+│       └── utils/        # Utilidades
+├── legal/                  # Documentación legal
 │   ├── politica-privacidad.html
 │   └── aviso-legal.html
-├── pages/
-│   ├── tramites.html
-│   ├── tecnologia.html
-│   ├── salud.html
-│   ├── educacion.html
-│   ├── finanzas.html
-│   ├── contacto.html
-│   ├── legal.html
-│   └── articulo-ejemplo.html
-├── seo/
+├── seo/                    # Optimización SEO
 │   ├── sitemap.xml
 │   ├── robots.txt
 │   └── metatags.html
-└── index.html
+└── README.md
 ```
 
-## 🛠️ Tecnologías Utilizadas
+### Descripción de Carpetas
+- **assets/**: Contiene todos los recursos estáticos del sitio
+  - `images/`: Almacena imágenes optimizadas para web
+  - `css/`: Contiene los estilos organizados por componentes
+  - `js/`: Scripts JavaScript modularizados
 
+- **legal/**: Documentación legal del sitio
+  - Políticas de privacidad
+  - Avisos legales
+  - Términos de uso
+
+- **seo/**: Archivos para optimización de motores de búsqueda
+  - Sitemap para indexación
+  - Configuración de robots
+  - Meta tags optimizados
+
+## Tecnologías Utilizadas
 - HTML5
 - CSS3
 - JavaScript
-- SEO optimizado
-- Diseño responsive
+- SEO Optimizado
+- Diseño Responsivo
+- Optimización de Rendimiento
 
-## 📋 Requisitos
+## SEO y Optimización
+- Sitemap XML para mejor indexación
+- Meta tags optimizados
+- Robots.txt configurado
+- Estructura de URLs amigable
+- Contenido optimizado para motores de búsqueda
 
-- Navegador web moderno
-- Conexión a internet
-
-## 🚀 Instalación
-
-1. Clona el repositorio:
-```bash
-git clone https://github.com/tu-usuario/info-peru.git
-```
-
-2. Navega al directorio del proyecto:
-```bash
-cd info-peru
-```
-
-3. Abre `index.html` en tu navegador preferido.
-
-## 📝 Uso
-
-El sitio web está diseñado para ser intuitivo y fácil de usar:
-
-1. Navega por las diferentes secciones usando el menú principal
-2. Utiliza la barra de búsqueda para encontrar información específica
-3. Accede a los trámites y servicios desde sus respectivas secciones
-4. Consulta la información legal en la sección correspondiente
-
-## 🤝 Contribución
-
-Las contribuciones son bienvenidas. Para contribuir:
-
-1. Haz un Fork del proyecto
+## Contribución
+Si deseas contribuir al proyecto, por favor:
+1. Haz un fork del repositorio
 2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
 3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
 4. Push a la rama (`git push origin feature/AmazingFeature`)
 5. Abre un Pull Request
 
-## 📄 Licencia
+## Licencia
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
 
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+## Contacto
+- Email: contacto@infoperu.com
+- Sitio Web: [https://infoperu.com](https://infoperu.com)
 
-## 📞 Contacto
-
-- Email: info@infoperu.com
-- Teléfono: +51 123 456 789
-- Dirección: Lima, Perú
-
-## 🙏 Agradecimientos
-
-- A todos los contribuidores que han ayudado a mejorar este proyecto
-- A la comunidad de desarrolladores web por su apoyo y recursos
-- A los usuarios por su valiosa retroalimentación 
+## Agradecimientos
+- A todos los contribuidores que han ayudado a hacer de Info Perú una mejor plataforma
+- A la comunidad de desarrolladores por sus valiosas herramientas y recursos
+- A nuestros usuarios por su constante retroalimentación y apoyo 

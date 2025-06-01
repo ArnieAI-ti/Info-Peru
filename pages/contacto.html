@@ -30,6 +30,8 @@
 
     <!-- Estilos -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components/interactive.css">
+    <link rel="stylesheet" href="../assets/css/components/animations.css">
 </head>
 <body>
     <!-- Header -->
@@ -95,7 +97,16 @@
     <div id="footer-container"></div>
 
     <!-- Scripts -->
+    <script src="../assets/js/config/config.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/components.js"></script>
+    
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            feather.replace();
+        });
+    </script>
 </body>
 </html>

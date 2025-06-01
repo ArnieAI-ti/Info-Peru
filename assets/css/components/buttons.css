@@ -1,0 +1,169 @@
+/* Estilos base de botones */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--btn-padding-y) var(--btn-padding-x);
+    font-size: var(--font-size-base);
+    font-weight: var(--btn-font-weight);
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: var(--btn-border-radius);
+    transition: all var(--transition-normal) ease;
+}
+
+/* Botón Primario */
+.btn-primary {
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+}
+
+.btn-primary:hover {
+    background-color: var(--btn-primary-hover);
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Botón Secundario */
+.btn-secondary {
+    background-color: var(--btn-secondary-bg);
+    color: var(--btn-secondary-text);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--btn-secondary-hover);
+    border-color: var(--border-color-dark);
+}
+
+/* Botón de Éxito */
+.btn-success {
+    background-color: var(--btn-success-bg);
+    color: var(--btn-success-text);
+}
+
+.btn-success:hover {
+    background-color: var(--btn-success-hover);
+}
+
+/* Botón de Advertencia */
+.btn-warning {
+    background-color: var(--btn-warning-bg);
+    color: var(--btn-warning-text);
+}
+
+.btn-warning:hover {
+    background-color: var(--btn-warning-hover);
+}
+
+/* Botón de Error */
+.btn-error {
+    background-color: var(--btn-error-bg);
+    color: var(--btn-error-text);
+}
+
+.btn-error:hover {
+    background-color: var(--btn-error-hover);
+}
+
+/* Botón Outline */
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn-outline:hover {
+    background-color: var(--state-hover);
+    border-color: var(--color-primary-dark);
+    color: var(--color-primary-dark);
+}
+
+/* Botón Ghost */
+.btn-ghost {
+    background-color: transparent;
+    color: var(--color-primary);
+}
+
+.btn-ghost:hover {
+    background-color: var(--state-hover);
+    color: var(--color-primary-dark);
+}
+
+/* Tamaños de botones */
+.btn-sm {
+    padding: calc(var(--btn-padding-y) * 0.75) calc(var(--btn-padding-x) * 0.75);
+    font-size: var(--font-size-sm);
+}
+
+.btn-lg {
+    padding: calc(var(--btn-padding-y) * 1.25) calc(var(--btn-padding-x) * 1.25);
+    font-size: var(--font-size-lg);
+}
+
+/* Botón con ícono */
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.btn-icon i,
+.btn-icon svg {
+    font-size: 1.2em;
+}
+
+/* Botón bloque */
+.btn-block {
+    display: flex;
+    width: 100%;
+}
+
+/* Estados de botón */
+.btn:disabled,
+.btn.disabled {
+    opacity: 0.65;
+    pointer-events: none;
+}
+
+/* Grupo de botones */
+.btn-group {
+    display: inline-flex;
+    gap: var(--spacing-sm);
+}
+
+.btn-group-vertical {
+    display: inline-flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .btn {
+        padding: calc(var(--btn-padding-y) * 0.9) calc(var(--btn-padding-x) * 0.9);
+    }
+    
+    .btn-lg {
+        padding: calc(var(--btn-padding-y) * 1.1) calc(var(--btn-padding-x) * 1.1);
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-group .btn {
+        width: 100%;
+    }
+} 

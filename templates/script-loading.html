@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Carga de Scripts</title>
+    
+    <!-- Precargar scripts críticos -->
+    <link rel="preload" href="/assets/js/config.js" as="script">
+    <link rel="preload" href="/assets/js/main.js" as="script">
+</head>
+<body>
+    <!-- Contenido de la página -->
+    <div class="current-date"></div>
+    <button class="nav-toggle" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <button class="back-to-top" aria-label="Volver arriba">↑</button>
+
+    <!-- Cargar scripts al final del body -->
+    <script>
+        // Cargar scripts de forma asíncrona
+        document.addEventListener('DOMContentLoaded', () => {
+            window.scriptConfig.loadScripts([
+                '/assets/js/config.js',
+                '/assets/js/main.js'
+            ]);
+        });
+    </script>
+</body>
+</html> 
