@@ -1,39 +1,33 @@
 /* Estilos de navegación */
-.nav-container {
-    background-color: var(--color-blanco);
+.main-nav {
+    background-color: var(--color-secundario); /* Usar color secundario para la barra */
+    padding: 0.75rem 0; /* Aumentar padding vertical */
     box-shadow: var(--shadow-sm);
-    position: sticky;
-    top: 0;
-    z-index: var(--z-index-sticky);
-    transition: box-shadow 0.3s ease;
 }
 
-.nav-container.scrolled {
-    box-shadow: var(--shadow-md);
-}
-
-.nav-content {
+.nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
+    padding: 0 var(--spacing-md); /* Usar variable de espaciado */
+    display: flex; /* Asegurar flexbox para alinear logo y menu */
+    justify-content: space-between; /* Espacio entre logo y menu */
     align-items: center;
 }
 
+/* Si tienes un logo en el nav-container, estilízalo aquí */
 .nav-logo {
     font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--color-primario);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-blanco); /* Color blanco para el logo en la barra oscura */
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--spacing-sm);
     transition: color 0.3s ease;
 }
 
 .nav-logo:hover {
-    color: var(--color-secundario);
+    color: var(--color-primario); /* Cambio de color al pasar el ratón */
 }
 
 .nav-logo img {
@@ -41,24 +35,77 @@
     width: auto;
 }
 
-.nav-menu {
-    display: flex;
-    gap: 2rem;
+/* Estilos para el menú principal */
+.nav-list {
     list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg); /* Aumentar espacio entre elementos */
     margin: 0;
     padding: 0;
 }
 
-.nav-link {
-    color: var(--color-texto);
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem;
-    border-radius: var(--border-radius);
-    transition: all 0.3s ease;
+.nav-item {
     position: relative;
 }
 
+.nav-link {
+    color: var(--color-blanco); /* Color blanco para los enlaces en la barra */
+    text-decoration: none;
+    padding: var(--spacing-sm) var(--spacing-md); /* Usar variables de espaciado */
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs); /* Espacio pequeño entre icono y texto */
+    font-weight: var(--font-weight-medium);
+    transition: all 0.3s ease;
+    border-radius: var(--border-radius); /* Usar variable de borde redondeado */
+}
+
+.nav-link:hover {
+    background-color: rgba(var(--color-primario-rgb, 0, 188, 212), 0.2); /* Fondo semitransparente con color primario */
+    transform: translateY(-2px);
+}
+
+/* Estilos para los iconos Feather */
+.nav-link i {
+    width: 1.1rem; /* Tamaño slightly larger icons */
+    height: 1.1rem;
+    margin-right: var(--spacing-xs); /* Espacio a la derecha del icono */
+    stroke-width: 2; /* Grosor del trazo */
+    color: var(--color-blanco); /* Color blanco para los iconos */
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover i {
+    color: var(--color-primario); /* Color primario al pasar el ratón */
+}
+
+/* Estilos para el botón de toggle móvil */
+.nav-toggle {
+    display: none; /* Oculto por defecto en escritorio */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
+    color: var(--color-blanco); /* Color blanco para el icono del toggle */
+}
+
+.nav-toggle i {
+    width: 1.5rem; /* Tamaño del icono de toggle */
+    height: 1.5rem;
+    stroke-width: 2;
+    color: var(--color-blanco); /* Color blanco */
+    transition: color 0.3s ease;
+}
+
+.nav-toggle:hover {
+     background-color: rgba(var(--color-primario-rgb, 0, 188, 212), 0.2); /* Fondo semitransparente */
+    outline: none;
+}
+
+/* Efecto de línea debajo del enlace activo */
 .nav-link::after {
     content: '';
     position: absolute;
@@ -66,72 +113,26 @@
     left: 50%;
     width: 0;
     height: 2px;
-    background-color: var(--color-primario);
+    background-color: var(--color-primario); /* Usar color primario para la línea */
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
 
-.nav-link:hover,
-.nav-link:focus {
-    color: var(--color-primario);
-    outline: none;
-}
-
-.nav-link:hover::after,
-.nav-link:focus::after {
+.nav-link:hover::after {
     width: 100%;
 }
 
+/* Estilos para el enlace activo */
 .nav-link.active {
-    color: var(--color-primario);
+    color: var(--color-primario); /* Color primario para el texto activo */
+}
+
+.nav-link.active i {
+     color: var(--color-primario); /* Color primario para el icono activo */
 }
 
 .nav-link.active::after {
     width: 100%;
-}
-
-/* Menú móvil */
-.nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    border-radius: var(--border-radius);
-    transition: background-color 0.3s ease;
-}
-
-.nav-toggle:hover,
-.nav-toggle:focus {
-    background-color: var(--color-fondo);
-    outline: none;
-}
-
-.nav-toggle-icon {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background-color: var(--color-texto);
-    position: relative;
-    transition: background-color 0.3s ease;
-}
-
-.nav-toggle-icon::before,
-.nav-toggle-icon::after {
-    content: '';
-    position: absolute;
-    width: 24px;
-    height: 2px;
-    background-color: var(--color-texto);
-    transition: transform 0.3s ease;
-}
-
-.nav-toggle-icon::before {
-    top: -6px;
-}
-
-.nav-toggle-icon::after {
-    bottom: -6px;
 }
 
 /* Overlay del menú móvil */
@@ -142,15 +143,115 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(var(--color-secundario-rgb, 0, 121, 107), 0.8); /* Fondo semitransparente oscuro */
     z-index: var(--z-index-modal-backdrop);
     opacity: 0;
+    visibility: hidden;
     transition: opacity 0.3s ease;
     backdrop-filter: blur(4px);
 }
 
 .menu-overlay.active {
     opacity: 1;
+    visibility: visible;
+}
+
+/* Menú móvil (Sidebar) */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Oculto por defecto */
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--color-fondo); /* Usar color de fondo claro */
+    flex-direction: column;
+    padding: var(--spacing-xl) var(--spacing-md); /* Ajustar padding */
+    transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: var(--z-index-modal);
+    box-shadow: var(--shadow-lg);
+}
+
+.nav-menu.active {
+    right: 0;
+}
+
+.nav-toggle.active .nav-toggle-icon {
+    background-color: transparent;
+}
+
+.nav-toggle.active .nav-toggle-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.nav-toggle.active .nav-toggle-icon::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+.nav-menu .nav-list {
+    flex-direction: column;
+    gap: var(--spacing-md); /* Espacio entre elementos en menú móvil */
+    align-items: flex-start; /* Alinear a la izquierda en móvil */
+}
+
+.nav-menu .nav-item {
+    width: 100%; /* Ocupar todo el ancho */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+.nav-menu .nav-link {
+    color: var(--color-texto); /* Color de texto oscuro en menú móvil */
+    padding: var(--spacing-sm) 0; /* Padding ajustado en móvil */
+    justify-content: flex-start; /* Alinear a la izquierda */
+    gap: var(--spacing-sm); /* Espacio entre icono y texto */
+}
+
+.nav-menu .nav-link:hover {
+    background-color: transparent; /* Eliminar fondo hover en móvil si no se desea */
+    color: var(--color-primario); /* Color primario al pasar el ratón */
+    transform: none; /* Eliminar transformación hover en móvil */
+}
+
+.nav-menu .nav-link i {
+    color: var(--color-secundario); /* Color secundario para iconos en menú móvil */
+}
+
+.nav-menu .nav-link:hover i {
+    color: var(--color-primario); /* Color primario al pasar el ratón */
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    .nav-logo {
+        font-size: 1.25rem;
+    }
+
+    .nav-menu {
+        width: 100%;
+        max-width: none;
+        padding: var(--spacing-lg) var(--spacing-sm); /* Ajustar padding */
+    }
+
+    .nav-menu .nav-link {
+         padding: var(--spacing-xs) 0; /* Ajustar padding */
+    }
+}
+
+/* Asegurar visibilidad del texto en diferentes estados */
+.nav-link {
+    outline-color: var(--color-primario); /* Color de outline para accesibilidad */
+}
+
+/* Añadir variables RGB para usar en RGBA */
+:root {
+    --color-primario-rgb: 0, 188, 212; /* RGB de #00bcd4 */
+    --color-secundario-rgb: 0, 121, 107; /* RGB de #00796b */
 }
 
 /* Media queries para navegación móvil */

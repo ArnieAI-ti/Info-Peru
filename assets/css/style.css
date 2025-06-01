@@ -27,13 +27,13 @@
 /* Variables globales */
 :root {
     /* Colores principales */
-    --color-primario: #820AD1; /* Púrpura de Nubank */
-    --color-secundario: #34495e; /* Azul grisáceo oscuro */
+    --color-primario: #00bcd4; /* Un tono turquesa vibrante */
+    --color-secundario: #00796b; /* Un verde azulado oscuro para contraste */
     --color-blanco: #ffffff;
     --color-texto: #4a4a4a; /* Gris oscuro suave */
-    --color-fondo: #f8f9fa; /* Blanco muy ligero */
-    --color-fondo-alt: #e9ecef; /* Gris muy claro para secciones alternas */
-    --color-borde: #dee2e6; /* Gris para bordes */
+    --color-fondo: #e0f7fa; /* Un fondo muy claro en tono turquesa */
+    --color-fondo-alt: #b2ebf2; /* Un gris azulado claro para secciones alternas */
+    --color-borde: #80deea; /* Un tono de borde en turquesa claro */
     
     /* Espaciado */
     --spacing-xs: 0.25rem;
@@ -52,7 +52,7 @@
     --font-weight-bold: 700;
     
     /* Bordes */
-    --border-radius: 8px; /* Aumentado para esquinas más suaves */
+    --border-radius: 10px; /* Ligeramente aumentado para una curvatura más notable */
     --border-color: var(--color-borde);
     
     /* Sombras */
@@ -439,5 +439,105 @@ input:focus, textarea:focus {
 
      .category-grid {
         gap: var(--spacing-md); /* Ajustar espacio entre cards */
+    }
+}
+
+/* Estilos para Tarjetas de Contenido Específicas (Finanzas, Tecnología, Salud, Educación, etc.) */
+.finance-card,
+.tech-card,
+.salud-card,
+.educacion-card, /* Añadir otras clases de tarjetas si existen */
+.tramite-card { /* Asegurar que las tarjetas de trámites también usen estos estilos */
+    background-color: var(--color-blanco);
+    border-radius: var(--border-radius); /* Usar la variable global de borde */
+    box-shadow: var(--shadow-sm); /* Usar sombra pequeña por defecto */
+    padding: var(--spacing-lg); /* Usar variable de espaciado */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.finance-card:hover,
+.tech-card:hover,
+.salud-card:hover,
+.educacion-card:hover,
+.tramite-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md); /* Usar sombra media al pasar el ratón */
+}
+
+.finance-card h2,
+.tech-card h2,
+.salud-card h2,
+.educacion-card h2,
+.tramite-card h2 {
+     color: var(--color-secundario); /* Título principal de la tarjeta */
+     margin-bottom: var(--spacing-sm);
+     font-size: 1.4rem; /* Tamaño de fuente consistente con h3 */
+     line-height: 1.3;
+}
+
+.finance-card h3,
+.tech-card h3,
+.salud-card h3,
+.educacion-card h3,
+.tramite-card h3 {
+    color: var(--color-primario); /* Subtítulos o headers dentro de la info */
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.1rem; /* Tamaño de fuente para subtítulos */
+}
+
+.finance-card p,
+.tech-card p,
+.salud-card p,
+.educacion-card p,
+.tramite-card p {
+    color: var(--color-texto);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    flex-grow: 1; /* Para que el párrafo ocupe el espacio restante */
+}
+
+.finance-card .btn,
+.tech-card .btn,
+.salud-card .btn,
+.educacion-card .btn,
+.tramite-card .btn {
+    margin-top: var(--spacing-sm); /* Añadir espacio superior al botón */
+    align-self: flex-start; /* Alinear el botón a la izquierda */
+}
+
+.finance-card ul,
+.tech-card ul,
+.salud-card ul,
+.educacion-card ul,
+.tramite-card ul {
+    list-style: disc; /* Usar viñetas */
+    margin-left: var(--spacing-md); /* Añadir margen a la izquierda para la viñeta */
+    margin-bottom: var(--spacing-md);
+    padding: 0;
+}
+
+.finance-card ul li,
+.tech-card ul li,
+.salud-card ul li,
+.educacion-card ul li,
+.tramite-card ul li {
+    margin-bottom: var(--spacing-xs); /* Espacio entre elementos de la lista */
+    color: var(--color-texto);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+}
+
+/* Responsive para Tarjetas Específicas */
+@media (max-width: 768px) {
+    .finance-card,
+    .tech-card,
+    .salud-card,
+    .educacion-card,
+    .tramite-card {
+        padding: var(--spacing-md); /* Ajustar padding en móviles */
     }
 } 
