@@ -1,0 +1,94 @@
+<!-- Header Component -->
+<header class="site-header">
+    <div class="header-container">
+        <div class="logo-container">
+            <a href="https://arnieai-ti.github.io/Info-Peru/" class="logo-link">
+                <div class="logo-text">
+                    <span class="logo-name">Info Perú</span>
+                    <span class="logo-tagline">Tu Guía Digital</span>
+                </div>
+            </a>
+        </div>
+        <div class="header-actions">
+            <button class="theme-toggle" aria-label="Cambiar tema">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<style>
+.site-header {
+    background-color: var(--color-primario);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-name {
+    color: var(--color-blanco);
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.logo-tagline {
+    color: var(--color-secundario);
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--color-blanco);
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .logo-name {
+        font-size: 1.5rem;
+    }
+    
+    .logo-tagline {
+        font-size: 0.8rem;
+    }
+}
+</style> 

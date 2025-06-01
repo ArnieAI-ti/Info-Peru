@@ -1,0 +1,15 @@
+# robots.txt para Info Perú
+User-agent: *
+Allow: /
+Allow: /pages/
+Allow: /assets/
+
+# No permitir acceso a archivos de sistema
+Disallow: /components/
+Disallow: /seo/
+
+# Sitemap
+Sitemap: https://infoperu.com/seo/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10 
